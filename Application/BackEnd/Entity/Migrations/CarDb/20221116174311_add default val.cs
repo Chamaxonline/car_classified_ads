@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Entity.Migrations.SmartERPDb
+namespace Entity.Migrations.CarDb
 {
-    public partial class createcities_district_provience : Migration
+    public partial class adddefaultval : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<int>(
-                name: "ProvienceId",
-                table: "District",
+                name: "ManualOrderNumber",
+                table: "VehicleCompany",
                 nullable: false,
                 defaultValue: 0);
         }
@@ -16,8 +16,8 @@ namespace Entity.Migrations.SmartERPDb
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "ProvienceId",
-                table: "District");
+                name: "ManualOrderNumber",
+                table: "VehicleCompany");
         }
     }
 }
